@@ -6,7 +6,7 @@ This repository is a Chinese translation of the [CUDA C Programming Guide](https
 
 ## Repository Structure
 
-Each chapter and appendix lives in its own directory, with the Markdown file inside following the same naming pattern as the directory:
+Each chapter and appendix lives in its own directory, with the Markdown file inside following the established naming convention:
 
 ```
 第1章CUDA简介/
@@ -26,7 +26,7 @@ The `Readme.md` tracks which chapters/appendices have been fully proofread (`[x]
 ## Content Conventions
 
 - **Language**: All translated content must be written in Simplified Chinese.
-- **Terminology**: Use standard GPU/CUDA terminology in Chinese (e.g., 线程块 for thread block, 共享内存 for shared memory, 内核 for kernel, 流多处理器 for streaming multiprocessor). Prefer consistency with the existing translated chapters.
+- **Terminology**: Use standard GPU/CUDA terminology in Chinese (e.g., 线程块 for thread block, 共享内存 for shared memory, 内核 for kernel, 流式多处理器 for streaming multiprocessor). Prefer consistency with the existing translated chapters.
 - **Formatting**: Follow the Markdown style already used in each file — headings, code blocks (` ``` `), inline code (`` ` ` ``), tables, and math expressions should match the conventions found in the completed chapters (第1章–第5章 and 附录A).
 - **Code samples**: Preserve original CUDA C/C++ code snippets exactly; do not translate code. Add Chinese comments where useful.
 - **Images/figures**: Reference images using relative paths. Do not alter or delete existing figure files.
