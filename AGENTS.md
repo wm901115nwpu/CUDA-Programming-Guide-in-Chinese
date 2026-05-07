@@ -43,3 +43,24 @@ Chapters 1–5 and Appendix A are marked as proofread. Appendices B–N are tran
 4. **No new top-level files**: Do not create additional Markdown files at the repository root unless explicitly asked.
 5. **Preserve directory names**: Directory and file names use Chinese characters as established; do not rename them.
 6. **Branch**: Develop on the branch specified in the task instructions and open a pull request targeting `main`.
+
+## Cursor Cloud specific instructions
+
+This is a pure Markdown documentation repository with no build system, runtime services, or test frameworks. The development workflow is editing and linting `.md` files.
+
+### Available tooling
+
+- **Linting**: `markdownlint '**/*.md' --ignore '.git'` (installed globally via npm). The repo has many pre-existing style issues (6000+); most are line-length (MD013) and inline-HTML (MD033). When proofreading, focus on content correctness rather than satisfying all lint rules.
+- **Preview**: `grip <file.md> 0.0.0.0:6419` renders GitHub-flavored Markdown locally (installed via pip). Useful for verifying formatting of tables, code blocks, and headings.
+
+### Known issues
+
+- Image references in Markdown files point to `.png` files that are **not present** in the repository. This is pre-existing; do not attempt to fix unless explicitly asked.
+- The `Readme.md` links to `附录A支持GPU设备列表/附录A支持GPU设备列表.md` but the actual directory is `附录A支持CUDA的设备列表/`. This is a known path discrepancy.
+
+### Workflow for proofreading tasks
+
+1. Read the target appendix/chapter Markdown file.
+2. Compare terminology and formatting against completed chapters (第1章–第5章).
+3. Make corrections, commit, and update `Readme.md` checkbox if fully reviewed.
+4. Run `markdownlint <file> --disable MD013 MD033` to check for structural issues (ignore line-length and inline-HTML for Chinese content).
